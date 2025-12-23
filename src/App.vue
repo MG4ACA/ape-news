@@ -1,11 +1,9 @@
 <script setup>
-import Button from 'primevue/button';
-import InputSwitch from 'primevue/inputswitch';
-import Menubar from 'primevue/menubar';
-import { onMounted, ref, watch } from 'vue';
-import { useRouter } from 'vue-router';
+import { computed, onMounted, ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
 const router = useRouter();
+const route = useRoute();
 
 const theme = ref(localStorage.getItem('lumicore-theme') || 'light');
 
@@ -45,39 +43,68 @@ const navItems = ref([
   },
 ]);
 
-const anchors = [
+const homeAnchors = [
   { icon: 'pi pi-sparkles', href: '#hero', label: 'Top' },
   { icon: 'pi pi-chart-line', href: '#stats', label: 'Stats' },
+  { icon: 'pi pi-th-large', href: '#services', label: 'Services' },
   { icon: 'pi pi-cog', href: '#process', label: 'Process' },
   { icon: 'pi pi-star', href: '#testimonials', label: 'Love' },
-  { icon: 'pi pi-tags', href: '#pricing', label: 'Pricing' },
   { icon: 'pi pi-book', href: '#blog', label: 'Blog' },
+  { icon: 'pi pi-send', href: '#cta', label: 'CTA' },
 ];
+
+const servicesAnchors = [
+  { icon: 'pi pi-th-large', href: '#services', label: 'Services' },
+  { icon: 'pi pi-shield', href: '#differentiators', label: 'Differentiators' },
+  { icon: 'pi pi-question-circle', href: '#faq', label: 'FAQ' },
+  { icon: 'pi pi-send', href: '#cta', label: 'CTA' },
+];
+
+const portfolioAnchors = [
+  { icon: 'pi pi-images', href: '#portfolio', label: 'Portfolio' },
+  { icon: 'pi pi-send', href: '#cta', label: 'CTA' },
+];
+
+const aboutAnchors = [
+  { icon: 'pi pi-heart', href: '#values', label: 'Values' },
+  { icon: 'pi pi-clock', href: '#timeline', label: 'Timeline' },
+];
+
+const contactAnchors = [{ icon: 'pi pi-send', href: '#contact', label: 'Contact' }];
+
+const anchors = computed(() => {
+  switch (route.name) {
+    case 'home':
+      return homeAnchors;
+    case 'services':
+      return servicesAnchors;
+    case 'portfolio':
+      return portfolioAnchors;
+    case 'about':
+      return aboutAnchors;
+    case 'contact':
+      return contactAnchors;
+    default:
+      return [];
+  }
+});
 </script>
 
 <template>
   <div class="app-container">
-    <header class="sticky top-0 z-5" style="height: var(--nav-height)">
-      <Menubar :model="navItems" class="border-round-xl px-3 py-2">
+    <header class="sticky top-0 z-5 app-header" style="height: var(--nav-height)">
+      <Menubar :model="navItems" class="border-round-xl px-3 py-2 menubar-custom">
         <template #start>
           <div class="flex align-items-center gap-2 cursor-pointer" @click="router.push('/')">
             <img src="/logo.png" alt="Lumicore Logo" class="logo-header" />
-            <span class="text-xl font-bold">Lumicore</span>
           </div>
         </template>
         <template #end>
           <div class="flex align-items-center gap-3">
             <div class="flex align-items-center gap-2">
-              <i class="pi pi-moon text-secondary"></i>
+              <i :class="['pi', theme === 'dark' ? 'pi-moon' : 'pi-sun', 'text-secondary']"></i>
               <InputSwitch v-model="theme" true-value="dark" false-value="light" />
             </div>
-            <Button
-              label="Get a Quote"
-              icon="pi pi-arrow-right"
-              iconPos="right"
-              size="small"
-              @click="router.push('/contact')"
-            />
           </div>
         </template>
       </Menubar>
@@ -134,6 +161,7 @@ const anchors = [
   </div>
 </template>
 
-<style>
-/* Global styles are in main.css */
+<style lang="scss" scoped>
+.app-container {
+}
 </style>

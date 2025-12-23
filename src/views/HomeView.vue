@@ -1,6 +1,4 @@
-<script setup>
-import Button from 'primevue/button';
-</script>
+<script setup></script>
 
 <template>
   <div class="home-view">
@@ -17,14 +15,25 @@ import Button from 'primevue/button';
             Answer Engine Optimization, and measurable outcomes.
           </p>
           <div class="flex gap-2">
-            <Button label="Start a Project" icon="pi pi-arrow-right" class="btn-primary" @click="$router.push('/contact')" />
-            <Button label="View Portfolio" severity="secondary" outlined class="btn-ghost" @click="$router.push('/portfolio')" />
+            <Button
+              label="Start a Project"
+              icon="pi pi-arrow-right"
+              class="btn-primary"
+              @click="$router.push('/contact')"
+            />
+            <Button
+              label="View Portfolio"
+              severity="secondary"
+              outlined
+              class="btn-ghost"
+              @click="$router.push('/portfolio')"
+            />
           </div>
         </div>
         <div>
           <div class="mockup-frame">
-            <span class="mockup-tag">Device Mockup</span>
-            <img src="https://placehold.co/960x540/0f172a/ffffff?text=Product+Showcase" alt="Product Mockup" style="width: 100%; display: block" />
+            <img src="/hero-light-mode.png" alt="Product Mockup Light" class="hero-img-light" />
+            <img src="/hero-dark-mode.jpg" alt="Product Mockup Dark" class="hero-img-dark" />
           </div>
         </div>
       </div>
@@ -32,29 +41,27 @@ import Button from 'primevue/button';
 
     <section id="stats">
       <div class="container">
-        <div class="grid align-items-center">
-          <div class="col-12 md:col-4">
+        <div class="grid flex-column align-items-center">
+          <div class="flex flex-column">
             <h2 class="section-heading">We ship outcomes, not just code.</h2>
             <p class="section-lead">Metrics that keep product and revenue leaders smiling.</p>
           </div>
-          <div class="col-12 md:col-8">
-            <div class="stats-grid">
-              <div class="stat-card">
-                <div class="stat-number">200+</div>
-                <div class="text-secondary">projects delivered</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">35%</div>
-                <div class="text-secondary">avg. conversion lift</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">99.9%</div>
-                <div class="text-secondary">uptime across POS suite</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number">8x</div>
-                <div class="text-secondary">faster launches with AI</div>
-              </div>
+          <div class="flex flex-row gap-2">
+            <div class="stat-card">
+              <div class="stat-number">200+</div>
+              <div class="text-secondary">projects delivered</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">35%</div>
+              <div class="text-secondary">avg. conversion lift</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">99.9%</div>
+              <div class="text-secondary">uptime across POS suite</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">8x</div>
+              <div class="text-secondary">faster launches with AI</div>
             </div>
           </div>
         </div>
@@ -68,29 +75,41 @@ import Button from 'primevue/button';
           Web, mobile, POS, HR, and growth — engineered with security, AEO, and analytics baked in.
         </p>
         <div class="card-grid">
-          <div class="surface-card">
+          <div class="stat-card service-card">
             <h3>Web & App Engineering</h3>
-            <p class="text-secondary">Enterprise-grade Vue stacks, AI copilots, and blazing-fast experiences.</p>
+            <p class="text-secondary">
+              Enterprise-grade Vue stacks, AI copilots, and blazing-fast experiences.
+            </p>
           </div>
-          <div class="surface-card">
+          <div class="stat-card service-card">
             <h3>Mobile Experiences</h3>
-            <p class="text-secondary">Native and cross-platform apps with offline-first reliability.</p>
+            <p class="text-secondary">
+              Native and cross-platform apps with offline-first reliability.
+            </p>
           </div>
-          <div class="surface-card">
+          <div class="stat-card service-card">
             <h3>POS & Retail</h3>
-            <p class="text-secondary">Pharmacy, salon, and retail POS with inventory, loyalty, and real-time dashboards.</p>
+            <p class="text-secondary">
+              Pharmacy, salon, and retail POS with inventory, loyalty, and real-time dashboards.
+            </p>
           </div>
-          <div class="surface-card">
+          <div class="stat-card service-card">
             <h3>HR & Ops Automation</h3>
-            <p class="text-secondary">Attendance, payroll, and NLP-driven insights for people ops.</p>
+            <p class="text-secondary">
+              Attendance, payroll, and NLP-driven insights for people ops.
+            </p>
           </div>
-          <div class="surface-card">
+          <div class="stat-card service-card">
             <h3>Social & Content</h3>
-            <p class="text-secondary">AI-assisted content, scheduling, and growth analytics across channels.</p>
+            <p class="text-secondary">
+              AI-assisted content, scheduling, and growth analytics across channels.
+            </p>
           </div>
-          <div class="surface-card">
+          <div class="stat-card service-card">
             <h3>Security & Reliability</h3>
-            <p class="text-secondary">Zero-trust posture, audits, and observability from day one.</p>
+            <p class="text-secondary">
+              Zero-trust posture, audits, and observability from day one.
+            </p>
           </div>
         </div>
       </div>
@@ -101,19 +120,43 @@ import Button from 'primevue/button';
         <div class="grid align-items-center">
           <div class="col-12 md:col-5">
             <h2 class="section-heading">Tech stack tuned for scale</h2>
-            <p class="section-lead">We choose the right tool for the outcome — performance, security, and velocity.</p>
+            <p class="section-lead">
+              We choose the right tool for the outcome — performance, security, and velocity.
+            </p>
             <div class="flex flex-wrap gap-2">
-              <span class="tech-pill"><i class="pi pi-vimeo"></i> Vue / Vite</span>
-              <span class="tech-pill"><i class="pi pi-mobile"></i> iOS / Android</span>
-              <span class="tech-pill"><i class="pi pi-amazon"></i> AWS / Azure</span>
-              <span class="tech-pill"><i class="pi pi-database"></i> PostgreSQL</span>
-              <span class="tech-pill"><i class="pi pi-bolt"></i> AI / AEO</span>
-              <span class="tech-pill"><i class="pi pi-lock"></i> Zero Trust</span>
+              <span class="tech-pill">
+                <i class="pi pi-vimeo"></i>
+                Vue / Vite
+              </span>
+              <span class="tech-pill">
+                <i class="pi pi-mobile"></i>
+                iOS / Android
+              </span>
+              <span class="tech-pill">
+                <i class="pi pi-amazon"></i>
+                AWS / Azure
+              </span>
+              <span class="tech-pill">
+                <i class="pi pi-database"></i>
+                PostgreSQL
+              </span>
+              <span class="tech-pill">
+                <i class="pi pi-bolt"></i>
+                AI / AEO
+              </span>
+              <span class="tech-pill">
+                <i class="pi pi-lock"></i>
+                Zero Trust
+              </span>
             </div>
           </div>
           <div class="col-12 md:col-7">
             <div class="mockup-frame">
-              <img src="https://placehold.co/960x520/0b1324/ffffff?text=Dashboard+Mockup" alt="Dashboard" style="width: 100%; display: block" />
+              <img
+                src="https://placehold.co/960x520/0b1324/ffffff?text=Dashboard+Mockup"
+                alt="Dashboard"
+                style="width: 100%; display: block"
+              />
             </div>
           </div>
         </div>
@@ -123,41 +166,29 @@ import Button from 'primevue/button';
     <section id="process">
       <div class="container">
         <h2 class="section-heading text-center">Delivery motion that keeps momentum</h2>
-        <p class="section-lead text-center">Transparent sprints, measurable KPIs, and rapid releases.</p>
+        <p class="section-lead text-center">
+          Transparent sprints, measurable KPIs, and rapid releases.
+        </p>
         <div class="process-steps">
-          <div class="process-step">
+          <div class="stat-card process-card">
             <h4>01 / Discover</h4>
-            <p class="text-secondary">Stakeholder workshops, AEO keyword mapping, and success metrics.</p>
+            <p class="text-secondary">
+              Stakeholder workshops, AEO keyword mapping, and success metrics.
+            </p>
           </div>
-          <div class="process-step">
+          <div class="stat-card process-card">
             <h4>02 / Design</h4>
             <p class="text-secondary">Futuristic UI, device mockups, and interaction prototypes.</p>
           </div>
-          <div class="process-step">
+          <div class="stat-card process-card">
             <h4>03 / Build</h4>
             <p class="text-secondary">AI-assisted dev, secure pipelines, and frequent demos.</p>
           </div>
-          <div class="process-step">
+          <div class="stat-card process-card">
             <h4>04 / Launch & Grow</h4>
-            <p class="text-secondary">Perf tuning, A/B tests, observability, and growth playbooks.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="showcase">
-      <div class="container grid align-items-center">
-        <div class="col-12 md:col-6">
-          <h2 class="section-heading">Omni-channel device experiences</h2>
-          <p class="section-lead">Consistent UI across kiosks, tablets, phones, and desktops — with theme sync.</p>
-          <div class="flex gap-2">
-            <Button label="See POS Suite" class="btn-primary" icon="pi pi-shopping-cart" @click="$router.push('/portfolio')" />
-            <Button label="Book Demo" class="btn-ghost" icon="pi pi-calendar" @click="$router.push('/contact')" />
-          </div>
-        </div>
-        <div class="col-12 md:col-6">
-          <div class="mockup-frame">
-            <img src="https://placehold.co/900x520/111827/ffffff?text=Device+Mockups" alt="Devices" style="width: 100%; display: block" />
+            <p class="text-secondary">
+              Perf tuning, A/B tests, observability, and growth playbooks.
+            </p>
           </div>
         </div>
       </div>
@@ -166,43 +197,48 @@ import Button from 'primevue/button';
     <section id="testimonials">
       <div class="container">
         <h2 class="section-heading text-center">Loved by operators & founders</h2>
-        <p class="section-lead text-center">Testimonials that prove reliability, speed, and partnership.</p>
+        <p class="section-lead text-center">
+          Testimonials that prove reliability, speed, and partnership.
+        </p>
         <div class="card-grid">
-          <div class="surface-card">
+          <div class="stat-card testimonial-card">
+            <div class="testimonial-head">
+              <span class="testimonial-avatar">
+                <img src="https://placehold.co/96x96/0b1324/ffffff?text=HR" alt="Health Retail" />
+              </span>
+              <div>
+                <p class="testimonial-name">Director, Health Retail</p>
+                <p class="testimonial-role text-secondary">Pharmacy POS</p>
+              </div>
+            </div>
             <p>“Lumicore shipped our pharmacy POS in weeks — uptime is rock solid.”</p>
-            <p class="text-secondary">Director, Health Retail</p>
           </div>
-          <div class="surface-card">
+          <div class="stat-card testimonial-card">
+            <div class="testimonial-head">
+              <span class="testimonial-avatar">
+                <img
+                  src="https://placehold.co/96x96/7c3aed/ffffff?text=MK"
+                  alt="Head of Marketing"
+                />
+              </span>
+              <div>
+                <p class="testimonial-name">Head of Marketing, D2C Brand</p>
+                <p class="testimonial-role text-secondary">Growth & Content</p>
+              </div>
+            </div>
             <p>“Their AI-first approach cut our content ops time by 60%.”</p>
-            <p class="text-secondary">Head of Marketing, D2C Brand</p>
           </div>
-          <div class="surface-card">
+          <div class="stat-card testimonial-card">
+            <div class="testimonial-head">
+              <span class="testimonial-avatar">
+                <img src="https://placehold.co/96x96/14b8a6/ffffff?text=CT" alt="CTO" />
+              </span>
+              <div>
+                <p class="testimonial-name">CTO, SaaS Platform</p>
+                <p class="testimonial-role text-secondary">Cross-platform Delivery</p>
+              </div>
+            </div>
             <p>“We finally have one codebase across mobile and web. Releases are painless.”</p>
-            <p class="text-secondary">CTO, SaaS Platform</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing">
-      <div class="container">
-        <h2 class="section-heading text-center">Engagement models</h2>
-        <p class="section-lead text-center">Pick what fits your roadmap and velocity.</p>
-        <div class="price-grid">
-          <div class="price-card">
-            <h3>Launch</h3>
-            <p class="text-secondary">MVP in 6-10 weeks, AEO-ready.</p>
-            <p class="stat-number">$8k+</p>
-          </div>
-          <div class="price-card featured">
-            <h3>Scale</h3>
-            <p class="text-secondary">Cross-platform builds, POS, HR, analytics.</p>
-            <p class="stat-number">$15k+</p>
-          </div>
-          <div class="price-card">
-            <h3>Care</h3>
-            <p class="text-secondary">SRE, growth ops, continuous releases.</p>
-            <p class="stat-number">$5k/mo</p>
           </div>
         </div>
       </div>
@@ -211,7 +247,9 @@ import Button from 'primevue/button';
     <section id="blog">
       <div class="container">
         <h2 class="section-heading text-center">Insights & AEO-ready content</h2>
-        <p class="section-lead text-center">Answer Engine Optimization, AI mentions, and product learnings.</p>
+        <p class="section-lead text-center">
+          Answer Engine Optimization, AI mentions, and product learnings.
+        </p>
         <div class="blog-grid">
           <div class="blog-card surface-card">
             <img src="https://placehold.co/600x320/7c3aed/ffffff?text=AEO" alt="AEO" />
@@ -235,10 +273,22 @@ import Button from 'primevue/button';
     <section id="cta" class="angled-section">
       <div class="container text-center" style="padding: 3rem 1rem">
         <h2 class="section-heading">Ready to build what’s next?</h2>
-        <p class="section-lead">Tell us your goal — we’ll ship the roadmap, the product, and the outcomes.</p>
+        <p class="section-lead">
+          Tell us your goal — we’ll ship the roadmap, the product, and the outcomes.
+        </p>
         <div class="flex gap-2 justify-content-center">
-          <Button label="Book a Call" class="btn-primary" icon="pi pi-calendar" @click="$router.push('/contact')" />
-          <Button label="View Services" class="btn-ghost" icon="pi pi-th-large" @click="$router.push('/services')" />
+          <Button
+            label="Book a Call"
+            class="btn-primary"
+            icon="pi pi-calendar"
+            @click="$router.push('/contact')"
+          />
+          <Button
+            label="View Services"
+            class="btn-ghost"
+            icon="pi pi-th-large"
+            @click="$router.push('/services')"
+          />
         </div>
       </div>
     </section>

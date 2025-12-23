@@ -1,8 +1,4 @@
 <script setup>
-import Button from 'primevue/button';
-import InputText from 'primevue/inputtext';
-import Message from 'primevue/message';
-import Textarea from 'primevue/textarea';
 import { ref } from 'vue';
 
 const name = ref('');
