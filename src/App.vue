@@ -1,23 +1,40 @@
 <script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 import AppFooter from './components/common/AppFooter.vue';
 import AppHeader from './components/common/AppHeader.vue';
+
+const route = useRoute();
+
+// Check if current route is admin panel
+const isAdminRoute = computed(() => route.path.startsWith('/admin'));
 </script>
 
 <template>
   <div class="app-container">
     <Toast position="top-right" />
 
-    <AppHeader />
+    <!-- Admin Layout is self-contained -->
+    <router-view v-if="isAdminRoute" v-slot="{ Component }">
+      <transition name="fade" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
 
-    <main class="main-content">
-      <router-view v-slot="{ Component }">
-        <transition name="fade" mode="out-in">
-          <component :is="Component" />
-        </transition>
-      </router-view>
-    </main>
+    <!-- Main Site Layout -->
+    <template v-else>
+      <AppHeader />
 
-    <AppFooter />
+      <main class="main-content">
+        <router-view v-slot="{ Component }">
+          <transition name="fade" mode="out-in">
+            <component :is="Component" />
+          </transition>
+        </router-view>
+      </main>
+
+      <AppFooter />
+    </template>
   </div>
 </template>
 

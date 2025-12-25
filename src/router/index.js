@@ -1,6 +1,7 @@
 import { useAuthStore } from '@/stores/auth';
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import { adminGuard, superAdminGuard } from '@/middleware/adminGuard';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -134,6 +135,119 @@ const router = createRouter({
         title: 'Terms of Service | APE News',
         description: 'Our terms of service',
       },
+    },
+    // Admin Routes
+    {
+      path: '/admin',
+      component: () => import('../layouts/AdminLayout.vue'),
+      beforeEnter: adminGuard,
+      children: [
+        {
+          path: '',
+          redirect: '/admin/dashboard',
+        },
+        {
+          path: 'dashboard',
+          name: 'admin-dashboard',
+          component: () => import('../views/admin/AdminDashboard.vue'),
+          meta: {
+            title: 'Dashboard | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'news',
+          name: 'admin-news',
+          component: () => import('../views/admin/AdminNewsList.vue'),
+          meta: {
+            title: 'News Management | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'news/create',
+          name: 'admin-news-create',
+          component: () => import('../views/admin/AdminNewsCreate.vue'),
+          meta: {
+            title: 'Create Article | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'news/edit/:id',
+          name: 'admin-news-edit',
+          component: () => import('../views/admin/AdminNewsEdit.vue'),
+          meta: {
+            title: 'Edit Article | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'categories',
+          name: 'admin-categories',
+          component: () => import('../views/admin/AdminCategories.vue'),
+          meta: {
+            title: 'Categories | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'comments',
+          name: 'admin-comments',
+          component: () => import('../views/admin/AdminComments.vue'),
+          meta: {
+            title: 'Comment Moderation | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'videos',
+          name: 'admin-videos',
+          component: () => import('../views/admin/AdminVideos.vue'),
+          meta: {
+            title: 'Video Management | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'ads',
+          name: 'admin-ads',
+          component: () => import('../views/admin/AdminAds.vue'),
+          meta: {
+            title: 'Advertisements | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'analytics',
+          name: 'admin-analytics',
+          component: () => import('../views/admin/AdminAnalytics.vue'),
+          meta: {
+            title: 'Analytics | Admin Panel',
+            requiresAuth: true,
+            requiresAdmin: true,
+          },
+        },
+        {
+          path: 'users',
+          name: 'admin-users',
+          component: () => import('../views/admin/AdminUsers.vue'),
+          beforeEnter: superAdminGuard,
+          meta: {
+            title: 'User Management | Admin Panel',
+            requiresAuth: true,
+            requiresSuperAdmin: true,
+          },
+        },
+      ],
     },
   ],
   scrollBehavior() {
