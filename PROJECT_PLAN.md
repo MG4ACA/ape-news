@@ -198,81 +198,81 @@ Full-stack news website with user area and admin panel.
 
 ### 3.1 Setup & Configuration
 
-- [ ] Configure Vue Router with routes
-- [ ] Setup Pinia stores (auth, news, categories, user)
-- [ ] Create API service layer (services/)
-- [ ] Setup Axios interceptors (auth token, error handling)
-- [ ] Configure PrimeVue theme
+- [x] Configure Vue Router with routes
+- [x] Setup Pinia stores (auth, news, categories, user)
+- [x] Create API service layer (services/)
+- [x] Setup Axios interceptors (auth token, error handling)
+- [x] Configure PrimeVue theme
 
 ### 3.2 Common Components
 
-- [ ] Update AppHeader.vue with navigation
-- [ ] Update AppFooter.vue
-- [ ] Update SideRail.vue
-- [ ] Create LoadingSpinner.vue
-- [ ] Create ErrorMessage.vue
-- [ ] Create Pagination.vue
+- [x] Update AppHeader.vue with navigation
+- [x] Update AppFooter.vue
+- [x] Update SideRail.vue
+- [x] Create LoadingSpinner.vue
+- [x] Create ErrorMessage.vue
+- [x] Create Pagination.vue
 
 ### 3.3 Authentication
 
-- [ ] Create auth store (stores/auth.js)
-- [ ] Create authService.js
-- [ ] Create LoginForm.vue component (modal/dialog)
-- [ ] Create RegisterForm.vue component
-- [ ] Implement auth guard (middleware/auth.js)
-- [ ] Add login/logout to header
+- [x] Create auth store (stores/auth.js)
+- [x] Create authService.js
+- [x] Create LoginView.vue (separate page)
+- [x] Create RegisterView.vue (separate page)
+- [x] Implement auth guard (middleware/auth.js)
+- [x] Add login/logout to header
 
 ### 3.4 Home Page
 
-- [ ] Update HomeView.vue
-  - [ ] Featured/Breaking news section
-  - [ ] Latest news grid
-  - [ ] Categories showcase
+- [x] Update HomeView.vue
+  - [x] Featured/Breaking news section
+  - [x] Latest news grid
+  - [x] Categories showcase
   - [ ] Video section preview
   - [ ] Banner ad placements
 - [ ] Create FeaturedNews.vue component
-- [ ] Create NewsCard.vue component
+- [x] Create NewsCard.vue component
 - [ ] Create NewsGrid.vue component
 
 ### 3.5 News Listing & Detail
 
-- [ ] Create NewsListView.vue (all news)
-- [ ] Create CategoryView.vue (filter by category)
-- [ ] Create NewsDetailView.vue
-  - [ ] Article content with rich text
-  - [ ] YouTube video embed (if exists)
-  - [ ] Social share buttons
-  - [ ] Reading time display
-  - [ ] View count
-  - [ ] Comments section
-  - [ ] Related articles
+- [x] Create NewsListView.vue (all news)
+- [x] Create CategoryView.vue (filter by category)
+- [x] Create NewsDetailView.vue
+  - [x] Article content with rich text
+  - [x] YouTube video embed (if exists)
+  - [x] Social share buttons
+  - [x] Reading time display
+  - [x] View count
+  - [x] Comments section
+  - [x] Related articles
   - [ ] Banner ads
 - [ ] Create CategoryFilter.vue
 - [ ] Create SocialShare.vue
-- [ ] Create CommentSection.vue
+- [x] Create CommentSection.vue
 - [ ] Create RelatedNews.vue
 
 ### 3.6 Video Gallery
 
-- [ ] Create VideoGalleryView.vue
-- [ ] Create VideoCard.vue
+- [x] Create VideoGalleryView.vue
+- [x] Create VideoCard.vue
 - [ ] Create VideoPlayer.vue (YouTube embed)
 - [ ] Implement playlist/grid view
 
 ### 3.7 Search Functionality
 
-- [ ] Create SearchView.vue
-- [ ] Add search bar to header
-- [ ] Implement search API integration
-- [ ] Display search results
+- [x] Create SearchView.vue
+- [x] Add search bar to header
+- [x] Implement search API integration
+- [x] Display search results
 
 ### 3.8 User Profile & Bookmarks
 
-- [ ] Create UserProfileView.vue
-- [ ] Create user store (stores/user.js)
-- [ ] Create BookmarksList.vue
-- [ ] Implement bookmark functionality
-- [ ] Add bookmark button to news cards
+- [x] Create UserProfileView.vue
+- [x] Create user store (stores/user.js)
+- [x] Create BookmarksView.vue
+- [x] Implement bookmark functionality
+- [x] Add bookmark button to news cards
 
 ### 3.9 Responsive Design
 
