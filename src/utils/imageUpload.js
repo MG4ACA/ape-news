@@ -59,8 +59,13 @@ export function getImageUrl(imagePath) {
   if (!imagePath) return '';
   if (imagePath.startsWith('http')) return imagePath;
 
-  const baseUrl = import.meta.env.VITE_UPLOADS_BASE_URL || 'http://localhost:3000/uploads';
-  return `${baseUrl}${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
+  // If path already starts with /uploads, use it as-is for proxy
+  if (imagePath.startsWith('/uploads')) {
+    return imagePath;
+  }
+
+  // Otherwise, add /uploads prefix
+  return `/uploads${imagePath.startsWith('/') ? '' : '/'}${imagePath}`;
 }
 
 /**

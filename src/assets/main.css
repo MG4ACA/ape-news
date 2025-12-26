@@ -222,6 +222,12 @@ section {
   color: var(--accent-color);
 }
 
+.p-image {
+  img {
+    width: 100% !important;
+  }
+}
+
 /* Hero Image Theme Toggle */
 .hero-img-light,
 .hero-img-dark {
