@@ -378,13 +378,15 @@ Full-stack news website with user area and admin panel.
 - [x] Display videos in data table
 - [x] Integrate video API
 
-### 4.7 Comment Moderation
+### 4.7 Comment Moderation ✅
 
-- [ ] Create CommentModeration.vue
-- [ ] Display all comments with article context
-- [ ] Approve/Delete actions
-- [ ] Filter by status (pending, approved)
-- [ ] Integrate comment API
+- [x] Create CommentManager.vue
+- [x] Display all comments with article context
+- [x] Approve/Reject/Delete actions
+- [x] Filter by status (pending, approved, rejected)
+- [x] Integrate comment API
+- [x] Display comment statistics
+- [x] View comment details in modal
 
 ### 4.8 User & Role Management
 

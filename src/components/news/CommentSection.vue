@@ -130,9 +130,7 @@ const handleSubmit = async () => {
   submitting.value = true;
 
   try {
-    const response = await commentService.createComment(props.newsId, {
-      content: commentContent.value.trim(),
-    });
+    const response = await commentService.createComment(props.newsId, commentContent.value.trim());
 
     if (response.success) {
       toast.add({

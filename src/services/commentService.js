@@ -18,6 +18,41 @@ export const commentService = {
     const response = await api.delete(`/comments/${commentId}`);
     return response.data;
   },
+
+  // Admin: Get all comments with filtering
+  async getAdminComments(page = 1, limit = 20, filters = {}) {
+    const params = {
+      page,
+      limit,
+      ...filters,
+    };
+    const response = await api.get('/comments/admin/all', { params });
+    return response.data;
+  },
+
+  // Admin: Get comment statistics
+  async getCommentStats() {
+    const response = await api.get('/comments/admin/stats');
+    return response.data;
+  },
+
+  // Admin: Approve a comment
+  async approveComment(commentId) {
+    const response = await api.patch(`/comments/${commentId}/approve`);
+    return response.data;
+  },
+
+  // Admin: Reject a comment
+  async rejectComment(commentId) {
+    const response = await api.patch(`/comments/${commentId}/reject`);
+    return response.data;
+  },
+
+  // Admin: Delete a comment
+  async deleteCommentAdmin(commentId) {
+    const response = await api.delete(`/comments/${commentId}`);
+    return response.data;
+  },
 };
 
 export default commentService;
