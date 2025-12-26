@@ -71,7 +71,7 @@ const menuItems = [
   { path: '/admin/categories', icon: 'pi pi-sitemap', label: 'Categories' },
   { path: '/admin/comments', icon: 'pi pi-comments', label: 'Comments' },
   { path: '/admin/videos', icon: 'pi pi-video', label: 'Videos' },
-  { path: '/admin/ads', icon: 'pi pi-image', label: 'Advertisements' },
+  { path: '/admin/promotions', icon: 'pi pi-image', label: 'Promotions' },
   { path: '/admin/analytics', icon: 'pi pi-chart-line', label: 'Analytics' },
 ];
 

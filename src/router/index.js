@@ -217,11 +217,11 @@ const router = createRouter({
           },
         },
         {
-          path: 'ads',
-          name: 'admin-ads',
-          component: () => import('../views/admin/AdminAds.vue'),
+          path: 'promotions',
+          name: 'admin-promotions',
+          component: () => import('../views/admin/AdminPromotions.vue'),
           meta: {
-            title: 'Advertisements | Admin Panel',
+            title: 'Promotions | Admin Panel',
             requiresAuth: true,
             requiresAdmin: true,
           },
