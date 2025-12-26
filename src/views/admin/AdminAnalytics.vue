@@ -1,15 +1,15 @@
 <template>
   <div class="admin-analytics">
-    <h1 class="text-3xl font-bold mb-4">Analytics</h1>
-
-    <Card>
-      <template #content>
-        <p class="text-center py-8 text-color-secondary">Detailed analytics coming soon...</p>
-      </template>
-    </Card>
+    <AnalyticsDashboard />
   </div>
 </template>
 
 <script setup>
-// TODO: Implement detailed analytics
+import AnalyticsDashboard from '@/components/admin/AnalyticsDashboard.vue';
 </script>
+
+<style scoped>
+.admin-analytics {
+  @apply w-full;
+}
+</style>

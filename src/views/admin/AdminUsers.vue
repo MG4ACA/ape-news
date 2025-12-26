@@ -13,5 +13,3 @@ import UserManager from '@/components/admin/UserManager.vue';
   @apply w-full;
 }
 </style>
-// TODO: Implement user management
-</script>
