@@ -218,7 +218,7 @@ watch(locale, () => {
 
 .breaking-news-section {
   position: sticky;
-  top: 0;
+  top: 10vh;
   z-index: 100;
 }
 

@@ -2,8 +2,7 @@
   <div class="admin-sidebar" :class="{ collapsed: !visible }">
     <div class="sidebar-header">
       <router-link to="/admin" class="logo">
-        <i class="pi pi-shield text-3xl text-primary"></i>
-        <span v-if="visible" class="logo-text">APE Admin</span>
+        <img src="/logo.png" alt="APE Admin Logo" class="logo-image" />
       </router-link>
     </div>
 
@@ -112,7 +111,7 @@ const handleLogout = async () => {
 }
 
 .sidebar-header {
-  padding: 1.5rem;
+  padding: 0.25rem 1.5rem;
   border-bottom: 1px solid var(--surface-border);
 }
 
@@ -122,6 +121,11 @@ const handleLogout = async () => {
   gap: 1rem;
   text-decoration: none;
   color: var(--text-color);
+}
+
+.logo-image {
+  height: 10vh;
+  object-fit: contain;
 }
 
 .logo-text {

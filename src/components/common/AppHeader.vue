@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-5 app-header m-2" style="height: var(--nav-height)">
+  <header class="sticky top-0 app-header m-2" style="height: var(--nav-height)">
     <div
       class="logo-container flex align-items-center gap-2 cursor-pointer"
       @click="$router.push('/')"
@@ -187,6 +187,10 @@ const toggleUserMenu = (event) => {
 
 .logo-container {
   position: absolute;
-  z-index: 2;
+  z-index: 300;
+}
+
+header {
+  z-index: 200;
 }
 </style>
