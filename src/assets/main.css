@@ -175,9 +175,10 @@ section {
   transform: scale(1.09);
 }
 
-.p-menubar .p-menubar-item-link:hover .p-menuitem-text,
-.p-menubar .p-menubar-item-link:hover .p-menuitem-icon {
-  color: var(--accent-color) !important;
+.p-menubar {
+  .p-menuitem-link {
+    font-weight: 600;
+  }
 }
 
 .p-menubar-item:not(.p-disabled) > .p-menubar-item-content:hover {

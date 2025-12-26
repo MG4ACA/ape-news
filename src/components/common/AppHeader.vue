@@ -181,10 +181,12 @@ const toggleUserMenu = (event) => {
   object-fit: contain;
 }
 
-:deep(.menubar-custom .p-menuitem-text) {
-  font-size: 0.875rem;
+.menubar-custom {
+  .p-menuitem-text {
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
 }
-
 .logo-container {
   position: absolute;
   z-index: 300;
