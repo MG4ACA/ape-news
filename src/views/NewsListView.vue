@@ -16,6 +16,14 @@
             @click="sortBy = 'popular'"
             size="small"
           />
+          <Button
+            icon="pi pi-refresh"
+            :loading="newsStore.loading"
+            @click="refreshNews"
+            size="small"
+            severity="secondary"
+            v-tooltip.top="'Refresh'"
+          />
         </div>
       </div>
 
@@ -79,6 +87,10 @@ const fetchNews = async () => {
   } catch (error) {
     console.error('Failed to fetch news:', error);
   }
+};
+
+const refreshNews = () => {
+  fetchNews();
 };
 
 const handlePageChange = (page) => {

@@ -16,6 +16,7 @@
   --glow: 0 10px 45px #aac1ec;
   --nav-height: 72px;
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --p-menubar-item-color: #475569;
 }
 
 [data-theme='dark'] {
@@ -33,6 +34,7 @@
   --text-color: #e2e8f0;
   --text-secondary-color: #cbd5e1;
   --glow: 0 12px 48px #0a2a66;
+  --p-menubar-item-color: #475569;
 }
 
 * {
@@ -158,8 +160,13 @@ section {
   color: var(--text-secondary-color);
 }
 
-.p-menubar .p-menuitem-content {
-  background: transparent !important;
+.p-menubar {
+  color: var(--p-menubar-item-color) !important;
+
+  .p-menubar-item-content {
+    background: transparent !important;
+    color: #475569 !important;
+  }
 }
 
 .p-menubar .p-menubar-item-link:hover {

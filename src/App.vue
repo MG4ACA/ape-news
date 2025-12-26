@@ -51,7 +51,6 @@ const isAdminRoute = computed(() => route.path.startsWith('/admin'));
 
 .main-content {
   flex: 1;
-  margin-top: var(--nav-height);
   min-height: calc(100vh - var(--nav-height));
 }
 
