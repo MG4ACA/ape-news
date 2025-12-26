@@ -1,14 +1,11 @@
 <template>
-  <AdminLayout>
-    <div class="admin-ads">
-      <AdManager />
-    </div>
-  </AdminLayout>
+  <div class="admin-ads">
+    <AdManager />
+  </div>
 </template>
 
 <script setup>
 import AdManager from '@/components/admin/AdManager.vue';
-import AdminLayout from '@/layouts/AdminLayout.vue';
 </script>
 
 <style scoped>

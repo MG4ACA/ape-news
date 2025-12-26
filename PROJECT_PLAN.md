@@ -366,17 +366,17 @@ Full-stack news website with user area and admin panel.
 - [x] Display active ads in data table
 - [x] Integrate ad API
 
-### 4.6 Video Management
+### 4.6 Video Management ✅
 
-- [ ] Create AdminVideos.vue
-- [ ] Create VideoManager.vue component
-  - [ ] YouTube URL input
-  - [ ] Title, description
-  - [ ] Video thumbnail preview
-  - [ ] Category/Tag
-  - [ ] Publish toggle
-- [ ] Display videos in data table
-- [ ] Integrate video API
+- [x] Create AdminVideos.vue
+- [x] Create VideoManager.vue component
+  - [x] YouTube URL input
+  - [x] Title, description
+  - [x] Video thumbnail preview
+  - [x] Featured toggle
+  - [x] Active/Inactive toggle
+- [x] Display videos in data table
+- [x] Integrate video API
 
 ### 4.7 Comment Moderation
 
@@ -534,15 +534,15 @@ Full-stack news website with user area and admin panel.
 - 🔄 Phase 4.3: News Management (100%)
 - 🔄 Phase 4.4: Category Management (100%)
 - ✅ Phase 4.5: Advertisement Management (100%)
+- ✅ Phase 4.6: Video Management (100%)
 
 **In Progress:**
 
-- Phase 4.6: Video Management (0%)
 - Phase 4.7: Comment Moderation (0%)
 - Phase 4.8: User & Role Management (0%)
 - Phase 4.9: Analytics Page (0%)
 
-**Next Step:** Implement Video Management (Phase 4.6)
+**Next Step:** Implement Comment Moderation (Phase 4.7)
 
 ---
 
